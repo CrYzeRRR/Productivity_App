@@ -11,6 +11,7 @@ repositories {
 }
 
 dependencies {
+    compile 'org.openjfx:javafx:17-ea+13'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
@@ -18,3 +19,5 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+

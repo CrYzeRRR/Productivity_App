@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
@@ -19,59 +21,128 @@
                <font>
                   <Font size="20.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button layoutX="990.0" layoutY="33.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="90.0" text="ACCOUNT">
+            <Button layoutX="990.0" layoutY="33.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="90.0" text="ACC">
                <font>
                   <Font size="20.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </Pane>
-      <AnchorPane layoutY="136.0" prefHeight="593.0" prefWidth="1200.0" style="-fx-background-color: #3d3d3d;">
+      <Pane layoutY="136.0" prefHeight="594.0" prefWidth="1200.0" style="-fx-background-color: #323232;">
          <children>
-            <AnchorPane layoutX="36.0" layoutY="39.0" prefHeight="359.0" prefWidth="547.0" style="-fx-background-color: #2b2b2b;">
+            <Pane layoutX="41.0" layoutY="31.0" prefHeight="359.0" prefWidth="541.0" style="-fx-background-color: #2b2b2b;">
                <children>
-                  <Label layoutX="14.0" layoutY="6.0" prefHeight="55.0" prefWidth="278.0" text="Undone Tasks" textFill="WHITE">
+                  <Label prefHeight="55.0" prefWidth="278.0" text="Undone Tasks" textFill="WHITE">
                      <font>
                         <Font size="32.0" />
                      </font>
                   </Label>
                </children>
-            </AnchorPane>
-            <AnchorPane layoutX="36.0" layoutY="435.0" prefHeight="119.0" prefWidth="547.0" style="-fx-background-color: #2b2b2b;">
+            </Pane>
+            <Pane layoutX="627.0" layoutY="31.0" prefHeight="532.0" prefWidth="527.0" style="-fx-background-color: #2b2b2b;">
                <children>
-                  <Label layoutX="14.0" prefHeight="55.0" prefWidth="278.0" text="Reminders" textFill="WHITE">
+                  <Label prefHeight="55.0" prefWidth="278.0" text="Stats" textFill="WHITE">
                      <font>
                         <Font size="32.0" />
                      </font>
                   </Label>
                </children>
-            </AnchorPane>
-            <AnchorPane layoutX="617.0" layoutY="39.0" prefHeight="515.0" prefWidth="547.0" style="-fx-background-color: #2b2b2b;">
+            </Pane>
+            <Pane layoutX="41.0" layoutY="426.0" prefHeight="136.0" prefWidth="541.0" style="-fx-background-color: #2b2b2b;">
                <children>
-                  <Label layoutX="14.0" layoutY="7.0" prefHeight="55.0" prefWidth="278.0" text="Stats" textFill="WHITE">
+                  <Label prefHeight="55.0" prefWidth="278.0" text="Reminders" textFill="WHITE">
                      <font>
                         <Font size="32.0" />
                      </font>
                   </Label>
                </children>
-            </AnchorPane>
+            </Pane>
          </children>
-      </AnchorPane>
-      <AnchorPane layoutY="729.0" prefHeight="72.0" prefWidth="1200.0" style="-fx-background-color: #2b2b2b;" />
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" visible="false">
+      </Pane>
+      <Pane layoutY="730.0" prefHeight="72.0" prefWidth="1200.0" style="-fx-background-color: #2b2b2b;" />
+      <Pane fx:id="menuPane" disable="true" prefHeight="802.0" prefWidth="1200.0" visible="false">
          <children>
-            <AnchorPane fx:id="menuAnchorPane" opacity="0.77" prefHeight="801.0" prefWidth="1200.0" style="-fx-background-color: #2b2b2b;" visible="false" />
-            <AnchorPane prefHeight="801.0" prefWidth="313.0" style="-fx-background-color: #282828;">
+            <Pane opacity="0.73" prefHeight="802.0" prefWidth="1200.0" style="-fx-background-color: #000000;" />
+            <Pane prefHeight="801.0" prefWidth="293.0" style="-fx-background-color: #2b2b2b;">
                <children>
                   <Button layoutX="99.0" layoutY="32.0" mnemonicParsing="false" onAction="#displayMenu" prefHeight="72.0" prefWidth="90.0" text="MENU">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
+                  <VBox layoutX="40.0" layoutY="156.0" prefHeight="396.0" prefWidth="209.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="tasksBtn" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="93.0" style="-fx-background-color: none;" text="Tasks" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="goalsBtn" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: none;" text="Goals" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="toDoBtn" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: none;" text="To-Do" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="scheduleBtn" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: none;" text="Schedule" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="habitsBtn" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: none;" text="Habits" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="progressBtn" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: none;" text="Progress Tracker" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="quotesBtn" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: none;" text="Quotes" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </VBox>
                </children>
-            </AnchorPane>
+            </Pane>
          </children>
-      </AnchorPane>
+      </Pane>
    </children>
 </AnchorPane>

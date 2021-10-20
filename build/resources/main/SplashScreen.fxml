@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SplashFXMLController">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #2b2b2b;">
+         <children>
+            <Label layoutX="262.0" layoutY="147.0" prefHeight="170.0" prefWidth="677.0" text="PRODUCTIVITY" textFill="WHITE">
+               <font>
+                  <Font name="Haettenschweiler" size="160.0" />
+               </font>
+            </Label>
+            <Pane layoutX="262.0" layoutY="302.0" prefHeight="3.0" prefWidth="652.0" style="-fx-background-color: #ffffff;" />
+            <Text fill="#bcbcbc" layoutX="266.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tip : Don't forget to set reminders in order to remember your tasks." wrappingWidth="669.478515625">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
+            <ProgressBar fx:id="splashProgressBar" layoutX="262.0" layoutY="580.0" prefHeight="18.0" prefWidth="677.0" progress="0.0" />
+            <Text fill="#ebebeb" layoutX="23.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello *user*">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
+   <children>
+      <Pane prefHeight="136.0" prefWidth="1200.0" style="-fx-background-color: #2b2b2b;">
+         <children>
+            <Label alignment="CENTER" layoutX="345.0" layoutY="9.0" prefHeight="119.0" prefWidth="510.0" text="PRODUCTIVITY" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Haettenschweiler" size="96.0" />
+               </font>
+            </Label>
+            <Button layoutX="99.0" layoutY="32.0" mnemonicParsing="false" onAction="#displayMenu" prefHeight="72.0" prefWidth="90.0" text="MENU">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="990.0" layoutY="33.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="90.0" text="ACC">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutY="136.0" prefHeight="594.0" prefWidth="1200.0" style="-fx-background-color: #323232;">
+         <children>
+            <Pane layoutX="41.0" layoutY="31.0" prefHeight="359.0" prefWidth="541.0" style="-fx-background-color: #2b2b2b;">
+               <children>
+                  <Label prefHeight="55.0" prefWidth="278.0" text="Undone Tasks" textFill="WHITE">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="627.0" layoutY="31.0" prefHeight="532.0" prefWidth="527.0" style="-fx-background-color: #2b2b2b;">
+               <children>
+                  <Label prefHeight="55.0" prefWidth="278.0" text="Stats" textFill="WHITE">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="41.0" layoutY="426.0" prefHeight="136.0" prefWidth="541.0" style="-fx-background-color: #2b2b2b;">
+               <children>
+                  <Label prefHeight="55.0" prefWidth="278.0" text="Reminders" textFill="WHITE">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutY="730.0" prefHeight="72.0" prefWidth="1200.0" style="-fx-background-color: #2b2b2b;" />
+      <Pane fx:id="menuPane" disable="true" prefHeight="802.0" prefWidth="1200.0" visible="false">
+         <children>
+            <Pane opacity="0.73" prefHeight="802.0" prefWidth="1200.0" style="-fx-background-color: #000000;" />
+            <Pane prefHeight="801.0" prefWidth="293.0" style="-fx-background-color: #2b2b2b;">
+               <children>
+                  <Button layoutX="99.0" layoutY="32.0" mnemonicParsing="false" onAction="#displayMenu" prefHeight="72.0" prefWidth="90.0" text="MENU">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

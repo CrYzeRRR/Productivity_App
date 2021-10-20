@@ -1,9 +1,15 @@
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.AnchorPane;
 
 import java.awt.*;
 import javafx.event.ActionEvent;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.scene.control.Button;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -15,13 +21,14 @@ public class MainMenuController implements Initializable {
     @FXML
     private Button homeButton;
     @FXML
+    private Pane menuPane;
+
+    @FXML
+    private Button tasksBtn,goalsBtn,toDoBtn,scheduleBtn,habitsBtn,progressBtn,quotesBtn;
+
     /*
-       TODO: Swap anchor panes with panes
-       TODO: Just one anchor pane as root
        TODO: Splash screen ( with tips )
      */
-    private AnchorPane menuAnchorPane;
-
 
 
     @Override
@@ -32,15 +39,33 @@ public class MainMenuController implements Initializable {
     @FXML
     private void displayMenu(ActionEvent event) {
         if (menuIndex % 2 == 0) {
-            menuAnchorPane.setVisible(true);
-            menuAnchorPane.setDisable(false);
+            menuPane.setVisible(true);
+            menuPane.setDisable(false);
         }
         else {
-            menuAnchorPane.setVisible(false);
-            menuAnchorPane.setDisable(true);
+            menuPane.setVisible(false);
+            menuPane.setDisable(true);
         }
         menuIndex++;
     }
 
+    @FXML
+    private void handleButtonAction (ActionEvent event) throws Exception {
 
+        Stage stage;
+        Parent root;
+
+        if(event.getSource()==tasksBtn){
+            stage = (Stage) tasksBtn.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("TasksMenu.fxml"));
+        }
+        else {
+            stage = (Stage) tasksBtn.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("TasksMenu.fxml"));
+        }
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

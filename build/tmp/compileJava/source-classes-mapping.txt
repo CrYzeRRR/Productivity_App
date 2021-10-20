@@ -1,4 +1,11 @@
 Main.java
  Main
+MyPreloader.java
+ MyPreloader
+ MyPreloader$1
+SplashFXMLController.java
+ SplashFXMLController
 MainMenuController.java
  MainMenuController
+TasksMenuController.java
+ TasksMenuController
