@@ -76,5 +76,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Java Json Google" level="project" />
   </component>
 </module>
