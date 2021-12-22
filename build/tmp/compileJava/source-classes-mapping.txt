@@ -1,12 +1,9 @@
-Main.java
- Main
-ManageProperties.java
- Data
- ManageProperties
+Task.java
+ Task
 ColorConverter.java
  ColorConverter
 MainMenuController.java
  MainMenuController
  RandomQuotePicker
-Task.java
- Task
+Main.java
+ Main
