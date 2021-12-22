@@ -1,11 +1,12 @@
 Main.java
  Main
-MyPreloader.java
- MyPreloader
- MyPreloader$1
-SplashFXMLController.java
- SplashFXMLController
+ManageProperties.java
+ Data
+ ManageProperties
+ColorConverter.java
+ ColorConverter
 MainMenuController.java
  MainMenuController
-TasksMenuController.java
- TasksMenuController
+ RandomQuotePicker
+Task.java
+ Task
